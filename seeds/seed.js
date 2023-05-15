@@ -1,8 +1,9 @@
 const sequelize = require('../config/connection');
 
-const userData = require('./userData.json')
+const userData = require('./userData.json');
+const blogpostData = require('./blogpostData.json');
 //don't forget to add other models!!!
-const { User } = require('../models');
+const { User, BlogPost, Comment } = require('../models');
 
 //const xData = require('./xData.json');
 
