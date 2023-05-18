@@ -1,0 +1,1 @@
+//This file is a placeholder. I'd like to add in a proper profile page where you can see all the posts (and maybe comments) you've personally made. But that'll come after MVP.

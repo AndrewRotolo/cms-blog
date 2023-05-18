@@ -7,7 +7,7 @@ const logout = async () => {
     if (response.ok) {
         document.location.replace('/');
     } else {
-        //add in something here depending on whether or not I make a 404 page
+        //404 page?
     }
 };
 
