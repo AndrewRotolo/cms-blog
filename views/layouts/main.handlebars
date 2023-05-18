@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang=""en>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrew Rotolo's CMS Blog!</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+{{!-- Fix placeholders when you style this. --}}
+<body>
+    <header>
+        {{!This will be a banner on the top middle of the page. Unsure if I should have it link to the main page as I'll also have a more explicit link}}
+        <div>
+            <a href="/">Placeholder</a>
+        </div>
+        {{!This will be a horizontal banner directly under the main banner containing links to the homepage, the user's profile (if I implement it), and login/logout/signup}}
+        <nav>
+            <a href="/">Home</a>
+            {{!-- <a href="/profile">My Profile</a> Will uncomment and restyle if and when I implement profile page functionality --}}
+            {{#if logged_in}}
+            <button>Logout</button>
+            {{else}}
+            {{!Current plan is to have one page with both login and signup functionality. May split it up. We'll see}}
+            <a href="/login">Login or Sign Up</a>
+            {{/if}}
+        </nav>
+    </header>
+
+    <main>
+        {{{ body }}}
+    </main>
+
+{{#if logged_in}}
+<script src="/js/logout.js"></script>
+{{/if}}
+
+</body>
+</html>

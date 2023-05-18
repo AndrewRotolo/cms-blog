@@ -1,0 +1,9 @@
+{{!Don't forget to correctly setup the template.}}
+{{!For now, This'll just be the posts with links laid out in a list.}}
+
+{{#each blogposts as |post|}}
+<div>
+    <a href="/view/{{post.id}}">
+    <h4>{{post.title}}</h4>
+    </a>
+</div>

@@ -10,6 +10,7 @@ const { User, BlogPost, Comment } = require('../models');
 const seedDatabase = async () => {
     await sequelize.sync({ force: true });
 
+    // Note that bcrypt will fuck with seeded users and you won't be able to log into them. Maybe there's a workaround, but it's not worth dealing with at this point.
     const users = await User.bulkCreate(userData, {
         individualHooks: true,
         returning: true,
