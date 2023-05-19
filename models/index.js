@@ -8,7 +8,7 @@ const Comment = require('./Comment');
 //Users can have many Comments and BlogPosts
 
 User.hasMany(BlogPost, {
-    foreignKey: 'user-id',
+    foreignKey: 'user_id',
     onDelete: 'CASCADE'
 });
 

@@ -17,7 +17,10 @@ const seedDatabase = async () => {
     });
 
     //don't forget logic for other models
-
+    const blogposts = await BlogPost.bulkCreate(blogpostData, {
+        individualHooks: true,
+        returning: true,
+    });
 
     process.exit(0);
 };
